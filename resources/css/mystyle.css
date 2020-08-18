@@ -1,0 +1,301 @@
+body, ul, li, a, h1, h2, p {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Fredoka One', cursive;    
+}
+
+body{
+    background-color: #F2F3F1;
+}
+
+
+
+header {
+    background-color: #F9F9F9;
+    position: fixed;
+    width: 100%;
+    height: 65px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+}
+
+header h1{
+    padding: 5px 5px;
+    color: #FF0022;
+}
+
+header .verticalWrite{
+    position: relative;
+    margin-top: -15px;
+    margin-left: 60px;
+    writing-mode: vertical-rl;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: bold;
+}
+
+header .login{
+    padding: 15px;
+    text-align: right;
+}
+
+header .login a{
+    padding: 10px;
+    font-size: 12px;
+}
+
+header a{
+    
+    color: #0E1428;
+    margin-right: 0;
+}
+
+.search{    
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%; 
+    text-align: center;
+}
+
+.search input {
+    padding: 10px;    
+    border: 4px solid white;
+    margin-left: -5px;
+    width: 20%;
+}
+
+
+.search input:first-of-type{
+    border-radius: 25px 0px 0px 25px;
+    border-right: 2px solid silver;
+}
+
+.search button{
+    background-color: white;
+    padding: 10px;
+    border: 4px solid white;
+    border-left: 1px solid silver;
+    border-radius: 0px 25px 25px 0px;
+    margin-left: -5px;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner img { 
+    width: 100%; 
+}
+
+.banner .welcome {
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    background-color: hsl(180, 25%, 25%, .75);
+    padding: 15px;
+}
+
+.banner h2 {
+    color: white;
+    font-size: 45px;
+}
+
+.banner span {
+    font-size: 1.5em;
+}
+
+nav {
+    background-color: #0E1428;
+    padding: 20px;
+    position: sticky;
+    top: 65px;
+    margin-bottom: 70px;
+    z-index: 1;
+}
+
+
+nav li {
+    display: inline-block;
+    width:25%;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+nav li a {
+    text-decoration: none;
+    color: #F2F3F1;
+}
+
+nav li a:hover {
+    text-decoration: none;
+    color: #0E1428;
+    background: #F2F3F1;
+}
+
+main {
+    max-width: 100%;
+    width: 1200px;
+    margin: 50px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+section h2 {
+    color: #FF0022;
+    font-size: 36px;    
+}
+/* ### EVENTS #### */
+
+.event-list{
+    margin-top: 10px;  
+    text-align: center;
+}
+
+.event-item img{
+    border: 4px solid darkslategrey;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;  
+}
+
+.event-details{
+    padding: 10px;
+}
+
+.event-date{
+    color: lightslategray;
+}
+
+.event-title{
+    color: darkblue;
+}
+
+/* ### REGISTRO #### */
+.registro {
+    background-color: silver;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.registro h2 {
+    font-size: 36px;
+}
+
+.registro input {
+    margin-top: 20px;
+    padding: 15px;
+    border: 4px solid white;
+    border-radius: 25px;
+}
+
+.registro input:focus {
+    outline: none;
+    border: 4px solid orangered;
+    border-radius: 25px;
+}
+
+.registro input:valid {
+    border: 4px solid rgb(34, 170, 75);
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/*### MEDIA QUERIES ###*/
+
+@media screen and (max-width: 1365px)
+{   
+    
+    .banner .welcome {
+        display: none;
+    }
+    
+    .banner img{
+        display: none;
+    }
+
+    .search{    
+        position: fixed;
+        left: 0;
+        top: 5px;
+        z-index: 1;
+        width: 100%; 
+        text-align: center;      
+    }
+
+    nav li {
+        font-size: 20px;
+    }
+
+    section h2{
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 900px)
+{   
+    .search{
+        font-size: 10px;
+        top: 10px;
+    }
+
+    .banner .welcome h2 {
+        font-size: 25px ;
+    }
+
+    .banner .welcome {
+        top: 38% ;
+    }
+
+    nav li {
+        font-size: 15px;
+        display: block;
+        text-align: center;
+        width: 100%;        
+    }
+
+    section h2{
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    .search{
+        font-size: 10px;
+    }
+
+    .search input{
+        display: none;
+    }
+
+    .search button{
+    
+        border: 4px solid white;
+        border-radius: 25px 25px 25px 25px;
+    }
+    
+    .banner .welcome h2 {
+        font-size: 15px ;
+    }
+
+    .banner .welcome {
+        top: 42% ;
+    }
+
+    section h2{
+        font-size: 18px;
+    }
+}
